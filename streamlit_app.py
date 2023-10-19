@@ -1,11 +1,13 @@
 import streamlit
-streamlit.title ('My Parents New Healthy Diner')
+streamlit.title ('Breakfast Gavorites')
 streamlit.header ('Breakfast Menu')
 
 menu_items = [
-    'Omega 3 & Blueberry Oatmeal',
-    'Kale, Spinach & Rocket Smoothie',
-    'Hard-Boiled Free Range Egg'
+🥣 Omega 3 & Blueberry Oatmeal',
+🥗 'Kale, Spinach & Rocket Smoothie',
+🐔 'Hard-Boiled Free Range Egg',
+🥑🍞 Avocado Toast
+    
 ]
 
 for item in menu_items:
