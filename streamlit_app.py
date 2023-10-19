@@ -1,12 +1,15 @@
 import streamlit
 streamlit.title ('My Parents New Healthy Diner')
 streamlit.header ('Breakfast Menu')
-streamlit.write(
-    'Omega 3 & Blueberry Oatmeal';
-    'Kale, Spinach & Rocket Smoothie';
-    'Hard-Boiled Free Range Egg'
-)
 
+menu_items = [
+    'Omega 3 & Blueberry Oatmeal',
+    'Kale, Spinach & Rocket Smoothie',
+    'Hard-Boiled Free Range Egg'
+]
+
+for item in menu_items:
+    streamlit.write(item)
 
 
 
