@@ -1,7 +1,7 @@
 #Created streamlit py file
 import streamlit
-streamlit.title ('Breakfast Favorites')
-streamlit.header ('Breakfast Menu')
+streamlit.title ('My Parent's New Healthy Diner')
+streamlit.header ('Breakfast Favorites')
 
 menu_items = [
 '🥣 Omega 3 & Blueberry Oatmeal',
