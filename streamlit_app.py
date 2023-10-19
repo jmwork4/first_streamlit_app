@@ -3,10 +3,10 @@ streamlit.title ('Breakfast Gavorites')
 streamlit.header ('Breakfast Menu')
 
 menu_items = [
-🥣 Omega 3 & Blueberry Oatmeal',
+🥣 'Omega 3 & Blueberry Oatmeal',
 🥗 'Kale, Spinach & Rocket Smoothie',
 🐔 'Hard-Boiled Free Range Egg',
-🥑🍞 Avocado Toast
+🥑🍞 'Avocado Toast'
     
 ]
 
