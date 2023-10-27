@@ -67,14 +67,14 @@ except URLError as e:
         # displays the normalized data - what does this do?
 #import snowflake connector
 #import snowflake.connector
-streamlit.header("The fruit load list contains:")
+streamlit.header("View Our Fruit List - Add Your Favorites")
 #Snowflake related functions
 def get_fruit_load_list():
     with my_cnx.cursor() as my_cur:
          my_cur.execute("select * from fruit_load_list")
          return my_cur.fetchall()
 #Add a button to load the fruit
-if streamlit.button('Get Fruit Load List'):
+if streamlit.button('Get Fruit List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx.cursor()
 #my_cur.execute("insert into fruit_load_list values ('from streamlit')")
@@ -89,7 +89,7 @@ def insert_row_snowflake(new_fruit):
          my_cur.execute("insert into fruit_load_list values ('" + add_my_fruit + "')")
          return 'Thanks for adding' + new_fruit
 
-add_my_fruit = streamlit.text_input('View Our Fruit List - Add Your Favorites')
+add_my_fruit = streamlit.text_input('Add your favorite fruit to the list')
 if streamlit.button('Add a Fruit to the List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     back_from_function = insert_row_snowflake(add_my_fruit)
