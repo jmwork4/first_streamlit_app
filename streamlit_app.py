@@ -50,7 +50,14 @@ try:
     if not fruit_choice:
         streamlit.error("Please select a fruit to get information.")
     else:
-        #streamlit.write('The user entered ', fruit_choice)
+        back_from_function = get_fruityvice_data(fruit_choice)
+        streamlit.dataframe(back_from_funciton)
+except URLError as e:
+    streamlit.error()
+
+#don't run anything past here while we troubleshoot
+streamlit.stop()
+  #streamlit.write('The user entered ', fruit_choice)
 
         #import requests
         #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+ fruit_choice)
@@ -60,13 +67,6 @@ try:
         # normalize and store data -what does the next line do? 
         #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
         # displays the normalized data - what does this do?
-        back_from_function = get_fruityvice_data(fruit_choice)
-        streamlit.dataframe(back_from_funciton)
-except URLError as e:
-    streamlit.error()
-
-#don't run anything past here while we troubleshoot
-streamlit.stop()
 #import snowflake connector
 #import snowflake.connector
 
